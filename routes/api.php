@@ -7,7 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
 Route::post('/login', [LoginController::class, 'get'])->name('login');
-Route::post('/register', [RegisterController::class, 'create'])->name('register');
+Route::post('/register', [LoginController::class, 'create'])->name('register');
 
 Route::middleware('auth:sanctum')->group(function() {    
     Route::get('/users', [UserController::class, 'index'])->name('users');
