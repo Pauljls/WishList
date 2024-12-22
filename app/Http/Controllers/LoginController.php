@@ -18,7 +18,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $token = $request->user()->createToken('token-name', ['*'], now()->addMinute())->plainTextToken;
+            $token = $request->user()->createToken('acces_token')->plainTextToken;
     
             return response()->json(['token' => $token, 'user' => Auth::user()]);
         }
