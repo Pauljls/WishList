@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
-class calendarController extends Controller
+class CalendarController extends Controller
 {
     /**
      * Display a listing of the resource.

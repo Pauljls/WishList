@@ -11,7 +11,7 @@ class Gift extends Model
         'user_id',
         'name',
         'description',
-        'link',
+        'giftLink',
         'priority',
         'photo'
     ];

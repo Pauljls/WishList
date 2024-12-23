@@ -13,5 +13,6 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('/users', [UserController::class, 'index'])->name('users');
     Route::post('/user', [UserController::class, 'create'])->name('user');
     Route::post('/nuser', [UserController::class, 'store'])->name('nuser');
-    Route::get('/home', [HomeController::class, 'home'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::post('/home', [HomeController::class, 'create'])->name('createGift');
 });
