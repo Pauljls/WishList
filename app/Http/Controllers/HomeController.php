@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Obtén el usuario autenticado
+        
         $user = Auth::guard('sanctum')->user();
     
         if (!$user) {
@@ -22,8 +22,7 @@ class HomeController extends Controller
                 "message" => "Usuario no autenticado",
             ], 401);
         }
-    
-        // Carga la relación "friendships" del usuario
+
         $user->load('gifts');
     
         return response()->json($user->gifts);
